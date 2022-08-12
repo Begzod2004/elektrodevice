@@ -1,0 +1,50 @@
+{% extends "../base.html" %}
+
+
+
+
+{% block title %}
+Портфолио
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+
+<!-- Breadcrumb Begin -->
+
+<!-- Breadcrumb End -->
+
+<!-- Portfolio Section Begin -->
+<section class="portfolio spad">
+  <div>
+    
+    <h1 style="color: white;" class="card-title">{{ object.name }}</h1>
+    <p style="color: white;" class="card-text">Tel: {{ object.tel}}</p>
+    <p style="color: white;" class="card-text">Tel: {{ object.tel2}}</p>
+    <p style="color: white;" class="card-text">Tel: {{ object.tel3}}</p>
+    <h6 style="color: white;">{{ object.info }}</h6>
+    <h6 style="color: white;">{{ object.mail }}</h6>
+
+  </div>
+  </div>
+</section>
+<!-- Portfolio Section End -->
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script>
+  document.querySelector('.header-2').classList.add('active')
+  document.querySelector('.header-1').classList.remove('active')
+  document.querySelector('.header-3').classList.remove('active')
+  document.querySelector('.header-4').classList.remove('active')
+  document.querySelector('.header-5').classList.remove('active')
+</script>
+
+{% endblock %}

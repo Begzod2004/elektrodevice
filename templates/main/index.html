@@ -1,0 +1,278 @@
+{% extends "../base.html" %}
+
+{% block title %}
+    Elektro Device | Главная страницв
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+    {% load static %}
+
+<!-- Hero Section Begin -->
+<section class="hero">
+    <div class="hero__slider owl-carousel">
+        {% for item in Organization %}
+        <div class="hero__item set-bg" data-setbg="{% static 'files/hero/hero-2.jpg'%}">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-6">
+                        <div class="hero__text">
+                            <span>{{item.info}}</span>
+                            <h2>{{item.name}}</h2>
+                            <a href="{% url 'OrganizationDetailView' item.pk %}" class="primary-btn">видеть</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+      
+      
+    </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Services Section Begin -->
+<section class="services spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="services__title">
+                    <div class="section-title">
+                        <span>Наши сервисы</span>
+                        <h2>Вы получите:</h2>
+                    </div>
+                    <p>АСКУЭ «ELEKTRO-DEVICE» – это готовое решение, включающее в себя электросчётчики, оборудование для сбора и передачи информации, программное обеспечение.</p>
+                    <a href="{% url 'service' %}" class="primary-btn">Все сервисы</a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="services__item">
+                            <div class="services__item__icon">
+                                <img src="{% static 'files/icons/money-bag-48.png'%}" alt="">
+                            </div>
+                            <h4>Самые выгодные цены на нашем сегменте</h4>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="services__item">
+                            <div class="services__item__icon">
+                                <img src="{% static 'files/icons/transparent-electric-icon-electricity-icon-power-icon-5db257d6a4d588.2833207015719689826752.png'%}" alt="" style="width: 50px;">
+                            </div>
+                            <h4>Возможность изменения количества заказанной электроэнергии в месяце поставки</h4>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="services__item">
+                            <div class="services__item__icon">
+                                <img src="{% static 'files/icons/services-48.png'%}" alt="">
+                            </div>
+                            <h4>Качественный сервис</h4>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="services__item">
+                            <div class="services__item__icon">
+                                <img src="{% static 'files/icons/kindpng_730525.png'%}" alt="" style="width: 50px;">
+                            </div>
+                            <h4>Высокие технологии связи</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Counter Section Begin -->
+<section class="counter">
+    <div class="container">
+        <div class="counter__content">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-1.png'%}" alt="">
+                            <h2 class="counter_num">230</h2>
+                            <p>Многоэтажных домов оснащены АСКУЭ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item second__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-2.png'%}" alt="">
+                            <h2 class="counter_num">1068</h2>
+                            <p>Общедомовых счетчиков
+                                установлено</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item third__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-3.png'%}" alt="">
+                            <h2 class="counter_num">230</h2>
+                            <p>Индивидуальных
+                                однофазных счетчиков
+                                установлено</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item four__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-4.png'%}" alt="">
+                            <h2 class="counter_num">230</h2>
+                            <p>Концентраторов
+                                данных</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Counter Section End -->
+
+<!-- Team Section Begin -->
+<section class="team spad set-bg" data-setbg="{% static 'files/team-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title team__title">
+                    <h2>Наша команда</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item set-bg" data-setbg="{% static 'files/team/team-1.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bahromov Ramziddin</h4>
+                        <p>Универсальный пацан</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--second set-bg" data-setbg="{% static 'files/team/team-2.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bazarbaev Shohrux</h4>
+                        <p>Программист</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item set-bg" data-setbg="{% static 'files/team/team-1.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bahromov Ramziddin</h4>
+                        <p>Универсальный пацан</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--second set-bg" data-setbg="{% static 'files/team/team-2.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bazarbaev Shohrux</h4>
+                        <p>Программист</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
+<!-- Latest Blog Section Begin -->
+<section class="latest spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title center-title">
+                    <span>Блог</span>
+                    <h2>Новости</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="latest__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="blog__item latest__item">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dicta.</h4>
+                        <ul>
+                            <li>Январь 03, 2022</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad asperiores beatae dignissimos eius ex molestias, porro quasi totam vero.</p>
+                        <a href="#">Подробнее <span class="arrow_right"></span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="team__btn">
+            <a href="{% url 'new' %}" class="primary-btn">Все новости</a>
+        </div>
+    </div>
+</section>
+<!-- Latest Blog Section End -->
+
+<!-- Call To Action Section Begin -->
+<section class="callto spad set-bg" data-setbg="{% static 'files/callto-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="callto__text">
+                    <h2>Мониторинг в режиме реального времени</h2>
+                    <p>Специальное программное обеспечение позволяет обрабатывать данные счетчиков и отображать текущий расход ресурсов.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call To Action Section End -->
+
+
+
+
+
+{% endblock %}
+
+{% block custom_js %}
+    
+
+
+{% endblock %}

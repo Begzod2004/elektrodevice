@@ -1,0 +1,171 @@
+{% extends "../base.html" %}
+
+{% block title %}
+Портфолио
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="{% static 'files/breadcrumb-bg.jpg'%}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="breadcrumb__text">
+          <h2>Портфолио</h2>
+          <div class="breadcrumb__links">
+            <a href="#">Главная</a>
+            <span>Портфолио</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Portfolio Section Begin -->
+<section class="portfolio spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="portfolio__filter">
+          <li class="active" data-filter="*">Все</li>
+          <li data-filter=".schetchiki">Счетчики</li>
+          <li data-filter=".konsentrator">Концентраторы</li>
+          <li data-filter=".svyaz">Модули связи</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row portfolio__gallery">
+      <div class="col-lg-4 col-md-6 col-sm-6 mix schetchiki">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/portfolio-1.jpg'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>Однофазный многофункциональный счетчик с оптопортом в корпусе дизайна студии Артемия Лебедева. Повторяет все размеры и параметры стандартного индукционного счетчика.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mix schetchiki">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/portfolio-2.jpg'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              Трехфазный системный многофункциональный счетчик в стандартном корпусе
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mix schetchiki">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/53d66929567a953cc2bd73697179afaf.png'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              Однофазный многофункциональный счетчик с оптопортом в корпусе дизайна студии Артемия Лебедева. По желанию заказчика может комплектоваться различными интерфейсами.
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 mix konsentrator">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/portfolio-3.jpg'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              Трехфазный счетчик в стандартном корпусе со встроенным концентратором
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mix konsentrator">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/200d386e0dd3d2860832477fd15db462.png'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              Трехфазный счетчик в корпусе дизайна студии Артемия Лебедева со встроенным концентратором
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 mix svyaz">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/fc1a4b99ab02c46f652fd34c1dc32142.png'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              Стационарный модем для приема / передачи данных с установленных счетчиков в подъезде многоквартирного дома
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mix svyaz">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/9103f7ba9cc1a0ac6bf8c6295e5315a8.png'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              PLC модем для установки в готовый счетчик, позволяющий сделать его умным
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mix svyaz">
+        <div class="portfolio__item">
+          <div class="portfolio__item__video set-bg" data-setbg="{% static 'files/portfolio/d4caae1340c900c9afb98a0593169130.png'%}">
+
+          </div>
+          <div class="portfolio__item__text">
+            <h4>
+              Радиомодем для установки в готовый счетчик, позволяющий сделать его умным
+            </h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagination__option">
+          <a href="#" class="arrow__pagination left__arrow"><span class="arrow_left"></span> Пред</a>
+          <a href="#" class="number__pagination">1</a>
+          <a href="#" class="number__pagination">2</a>
+          <a href="#" class="arrow__pagination right__arrow">След <span class="arrow_right"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Portfolio Section End -->
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script>
+  document.querySelector('.header-2').classList.remove('active')
+  document.querySelector('.header-1').classList.remove('active')
+  document.querySelector('.header-3').classList.remove('active')
+  document.querySelector('.header-4').classList.add('active')
+  document.querySelector('.header-5').classList.remove('active')
+</script>
+
+{% endblock %}

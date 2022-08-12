@@ -1,0 +1,308 @@
+{% extends "../base.html" %}
+
+{% block title %}
+    О нас
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+    {% load static %}
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="{% static 'files/breadcrumb-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>О нас</h2>
+                    <div class="breadcrumb__links">
+                        <a href="#">Главная</a>
+                        <span>О нас</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- About Section Begin -->
+<section class="about spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about__pic">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="about__pic__item about__pic__item--large set-bg"
+                                 data-setbg="{% static 'files/about/ae6055bfa436edffabda321847134cee.jpg'%}"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="about__pic__item set-bg" data-setbg="{% static 'files/about/47c7e4d70764b7501982568dde3d50fe.jpg'%}"></div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="about__pic__item set-bg" data-setbg="{% static 'files/about/36123c416cd836a14edf089629c2f518.jpg'%}"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about__text">
+                    <div class="section-title">
+                        <span>О АСКУЭ</span>
+                        <h2>Кто мы такие?</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="{% static 'files/icons/services-48.png'%}" alt="">
+                                </div>
+                                <h4>Lorem ipsum dolor.</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, porro.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="services__item">
+                                <div class="services__item__icon">
+                                    <img src="{% static 'files/icons/transparent-electric-icon-electricity-icon-power-icon-5db257d6a4d588.2833207015719689826752.png'%}" alt="" style="width: 50px">
+                                </div>
+                                <h4>Lorem ipsum dolor.</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, fuga?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__text__desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, aut ipsum molestias numquam quis sequi sunt? Alias aut corporis ducimus, eum maiores, nihil numquam officiis qui, quisquam quod repellendus velit?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+<!-- Testimonial Section Begin -->
+<section class="testimonial spad set-bg" data-setbg="{% static 'files/testimonial-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title center-title">
+                    <span>Клиенты выбирают нас</span>
+                    <h2>Что же они говорят?</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="testimonial__slider owl-carousel">
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cumque exercitationem facere iusto veritatis!</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'files/testimonial/ta-1.jpg'%}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Bahromov Ramziddin</h5>
+                                <span>Web developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cumque exercitationem facere iusto veritatis!</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'files/testimonial/ta-1.jpg'%}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Bahromov Ramziddin</h5>
+                                <span>Web developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cumque exercitationem facere iusto veritatis!</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'files/testimonial/ta-1.jpg'%}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Bahromov Ramziddin</h5>
+                                <span>Web developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial__item">
+                        <div class="testimonial__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cumque exercitationem facere iusto veritatis!</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="{% static 'files/testimonial/ta-1.jpg'%}" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Bahromov Ramziddin</h5>
+                                <span>Web developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- Counter Section Begin -->
+<section class="counter">
+    <div class="container">
+        <div class="counter__content">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-1.png'%}" alt="">
+                            <h2 class="counter_num">230</h2>
+                            <p>Многоэтажных домов оснащены АСКУЭ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item second__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-2.png'%}" alt="">
+                            <h2 class="counter_num">1068</h2>
+                            <p>Общедомовых счетчиков установлено</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item third__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-3.png'%}" alt="">
+                            <h2 class="counter_num">230</h2>
+                            <p>Индивидуальных однофазных счетчиков установлено</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter__item four__item">
+                        <div class="counter__item__text">
+                            <img src="{% static 'files/icons/ci-4.png'%}" alt="">
+                            <h2 class="counter_num">230</h2>
+                            <p>Концентраторов данных</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Counter Section End -->
+
+<!-- Team Section Begin -->
+<section class="team spad set-bg" data-setbg="{% static 'files/team-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title team__title">
+                    <h2>Наша команда</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item set-bg" data-setbg="{% static 'files/team/team-1.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bahromov Ramziddin</h4>
+                        <p>Универсальный пацан</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--second set-bg" data-setbg="{% static 'files/team/team-2.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bazarbaev Shohrux</h4>
+                        <p>Программист</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item set-bg" data-setbg="{% static 'files/team/team-1.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bahromov Ramziddin</h4>
+                        <p>Универсальный пацан</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+                <div class="team__item team__item--second set-bg" data-setbg="{% static 'files/team/team-2.jpg'%}">
+                    <div class="team__item__text">
+                        <h4>Bazarbaev Shohrux</h4>
+                        <p>Программист</p>
+                        <div class="team__item__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+
+
+
+
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script>
+    document.querySelector('.header-2').classList.add('active')
+    document.querySelector('.header-1').classList.remove('active')
+    document.querySelector('.header-3').classList.remove('active')
+    document.querySelector('.header-4').classList.remove('active')
+    document.querySelector('.header-5').classList.remove('active')
+</script>
+
+{% endblock %}

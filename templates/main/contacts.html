@@ -1,0 +1,118 @@
+{% extends "../base.html" %}
+
+{% block title %}
+    Контакты
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+    {% load static %}
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="{% static 'files/breadcrumb-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Наши контакты</h2>
+                    <div class="breadcrumb__links">
+                        <a href="#">Главная</a>
+                        <span>Контакты</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Contact Widget Section Begin -->
+<section class="contact-widget spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                <div class="contact__widget__item">
+                    <div class="contact__widget__item__icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="contact__widget__item__text">
+                        <h4>Адрес</h4>
+                        <p>г. Ташкент, ул.Самарканд Дарваза, 4a-29</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                <div class="contact__widget__item">
+                    <div class="contact__widget__item__icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact__widget__item__text">
+                        <h4>Горячие линии</h4>
+                        <p>+998 97-711-88-95</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
+                <div class="contact__widget__item">
+                    <div class="contact__widget__item__icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="contact__widget__item__text">
+                        <h4>Почта</h4>
+                        <p>elektro_device@mail.ru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Widget Section End -->
+
+<!-- Call To Action Section Begin -->
+<section class="contact spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="contact__map">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.7215797677844!2d69.23210998424406!3d41.317758535458125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b988fb53ae9%3A0x17a6b7525bb6b4e6!2zNCDRg9C70LjRhtCwINCh0LDQvNCw0YDQutCw0L3QtCDQlNCw0YDQstC-0LfQsCwg0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1645350350767!5m2!1sru!2s"
+                            height="450" style="border:0;"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="contact__form">
+                    <h3>Обратная связь</h3>
+                    <form action="#">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Почта">
+                        <input type="text" placeholder="Веб сайт">
+                        <textarea placeholder="Тема"></textarea>
+                        <button type="submit" class="site-btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Call To Action Section End -->
+
+
+
+
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script>
+    document.querySelector('.header-5').classList.add('active')
+    document.querySelector('.header-1').classList.remove('active')
+    document.querySelector('.header-3').classList.remove('active')
+    document.querySelector('.header-4').classList.remove('active')
+    document.querySelector('.header-2').classList.remove('active')
+</script>
+
+{% endblock %}

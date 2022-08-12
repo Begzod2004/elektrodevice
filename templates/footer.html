@@ -1,0 +1,71 @@
+{% load static %}
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer__top__logo">
+                        <a href="#"><img src="{% static 'files/ed.svg'%}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 d-flex justify-content-end align-items-center">
+                    <div class="footer__top__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-telegram"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__option">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__option__item">
+                        <h5>О нас</h5>
+                        <p>АСКУЭ «ELEKTRO-DEVICE» служит для автоматизированного сбора информации с электросчетчиков потребителей, анализа полученной информации и передачи информации в биллинговые системы.</p>
+                        <a href="{% url 'about' %}" class="read__more">Подробнее <span class="arrow_right"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-3">
+                    <div class="footer__option__item">
+                        <h5>АСКУЭ</h5>
+                        <ul>
+                            <li class="active"><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'service' %}">Сервисы</a></li>
+                            <li><a href="{% url 'portfolio' %}">Портфолио</a></li>
+                            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__option__item">
+                        <h5>Обратный звонок</h5>
+                        <p>Оставьте заявки и мы вам в скором времени ответим...</p>
+                        <form action="#">
+                            <input type="number" placeholder="+998 (XX) XXX-XX-XX">
+                            <button type="submit"><i class="fa fa-phone"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="footer__copyright__text">Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        All rights reserved | Created by <a href="#">Begzod</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->

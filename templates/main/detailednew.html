@@ -1,0 +1,73 @@
+{% extends "../base.html" %}
+
+{% block title %}
+Новости
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+
+<!-- Blog Details Hero Begin -->
+<section class="blog-hero spad set-bg" data-setbg="{% static 'files/blog/blog-hero.jpg'%}">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8">
+        <div class="blog__hero__text">
+          <h2>{{ object.info }}</h2>
+          <ul>
+            <h1>{{ object.header }}</h1>
+            <a href="{% url 'NewDetailView' %}" class="primary-btn">видеть</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog Details Hero End -->
+
+<!-- Blog Details Section Begin -->
+<div class="blog-details spad">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8">
+        <div class="blog__details__content">
+          <div class="blog__details__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus, consequuntur cupiditate distinctio iure magni nobis perspiciatis porro, quaerat, quam quis repellat saepe sapiente soluta tempore ullam unde ut vel?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, sint vel? Eum excepturi id libero minima, nam nostrum praesentium quia quis repellendus rerum soluta veniam.</p>
+          </div>
+          <div class="blog__details__quote">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae dicta ex harum maiores quo saepe. Dolores eos maxime nobis.</p>
+            <h6>Mirzaqulov Begzod</h6>
+            <i class="fa fa-quote-right"></i>
+          </div>
+          <div class="blog__details__desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis delectus dolorum nam nihil perspiciatis quaerat. Deleniti eos fugiat laudantium non? Eligendi impedit nihil nulla quidem repudiandae rerum sed sit?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi esse eveniet excepturi explicabo fugiat itaque maiores nihil quisquam reprehenderit, voluptates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Blog Details Section End -->
+
+
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script>
+  document.querySelector('.header-2').classList.remove('active')
+  document.querySelector('.header-1').classList.remove('active')
+  document.querySelector('.header-3').classList.remove('active')
+  document.querySelector('.header-4').classList.remove('active')
+  document.querySelector('.header-5').classList.remove('active')
+</script>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Elektro-Device OFF Page">
+    <meta name="keywords" content="Elektro Device">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="{% static '/styles/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/styles/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/styles/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/styles/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/styles/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/styles/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}" type="text/css">
+    {% block custom_css %}
+    {% endblock %}
+</head>
+<body>
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+{% include 'header.html' %}
+
+{% block content %}
+{% endblock %}
+{% block main %}
+{% endblock %}
+
+{% include 'footer.html' %}
+<script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static '/js/mixitup.min.js' %}"></script>
+<script src="{% static '/js/masonry.pkgd.min.js' %}"></script>
+<script src="{% static '/js/jquery.slicknav.js' %}"></script>
+<script src="{% static '/js/owl.carousel.min.js' %}"></script>
+<script src="{% static '/js/main.js' %}"></script>
+{%block custom_js %}
+{% endblock %}
+</body>
+</html>

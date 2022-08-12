@@ -1,0 +1,218 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="description" content="Elektro-Device OFF Page">
+    <meta name="keywords" content="Elektro Device">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> 1251</title>
+     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css'%}">
+
+    <link rel="stylesheet" href="{% static 'assets/Sdn/export.css' %}" type="text/css" media="all" />
+    <!-- Start datatable css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/Sdn/jquery.dataTables.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/Sdn/dataTables.bootstrap4.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/Sdn/responsive.bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/Sdn/responsive.jqueryui.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'assets/css/typography.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/default-css.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+    <!-- modernizr css -->
+    <script src="{% static 'assets/js/vendor/modernizr-2.8.3.min.js'%}"></script>
+
+</head>
+<body>
+ <div id="preloader">
+        <div class="loader"></div>
+    </div>
+ <div class="page-container">
+
+             <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="{% url 'workplace' %}"><h4 class="text-white">E-DEVICE</h4></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li><a href="{% url 'workplace' %}"><span>Mijoz va Shartnomalarni ko`rish</span></a></li>
+                            <li><a href="#"><span>2</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+<div class="main-content">
+            <!-- header area start -->
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <!-- nav and search button -->
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Shartnomalar</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile pull-right">
+                            <img class="avatar user-thumb" src="{% static 'assets/images/author/avatar.png' %}" alt="avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <div class="row">
+                    <!-- Dark table start -->
+                    <div class="col-12 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Asosiy</h4>
+                                <div class="d-flex justify-content-end"><a class="btn btn-outline-primary m-3" href="{% url 'check' %}">Tekshrish</a></div>
+                                <div class="data-tables datatable-dark">
+                                    <table id="dataTable3" class="text-center w-100">
+                                        <thead class="text-capitalize">
+                                        <tr>
+                                            <th>Mijoz Nomi</th>
+                                            <th>Inn</th>
+                                            <th>Shartnomalar</th>
+                                            <th>Sharnoma soni</th>
+                                            <th>Holati</th>
+                                            <th>Mijoz aloqa yonalish</th>
+                                            <th>Aloqachi nomi</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for i in mijoz %}
+                                        <tr>
+                                            <td>{{i.name}}</td>
+                                            <td>{{i.inn}}</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-success mb-3" data-toggle="modal" data-target="#exampleModalCenter{{i.id}}">Shartnomani ko`rish</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalCenter{{i.id}}">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Shartnomalar</h5>
+                                                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table text-center">
+                                                    <thead class="text-uppercase bg-dark">
+                                                        <tr class="text-dark">
+                                                            <th scope="col">№</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Boshlanish vaqti</th>
+                                                            <th scope="col">Tugash vaqti</th>
+                                                            <th scope="col">Narxi</th>
+                                                            <th scope="col">Sharnoma holati('Yuborilgan','Tasdiqlangan','Tugagan')</th>
+                                                            <th scope="col">Hisob faktura</th>
+                                                            <th scope="col">Holati('Favol,'Favol emas')</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    {%for y in shartnoma %}
+                                                    {%if y.customer.id == i.id %}
+                                                        <tr>
+                                                            <th scope="row">{{ forloop.counter }}</th>
+                                                            <td>{{y.name}}</td>
+                                                            <td>{{y.start_date}}</td>
+                                                            <td>{{y.end_date}}</td>
+                                                            <td>{{y.price}}</td>
+                                                            <td>{{y.get_agree_status_display}}</td>
+                                                            <td>{{y.get_hisob_display}}</td>
+                                                            <td>{{y.get_status_display}}</td>
+                                                        </tr>
+                                                    {%endif%}
+                                                    {%endfor%}
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                            </td>
+                                            <td>{{i.number}}</td>
+                                            <td>
+                                                {%if i.status %}
+                                                Faol
+                                                {%else%}
+                                                Faol emas
+                                                {%endif%}
+                                                </td>
+                                            <td>
+                                                {%if i.who_send %}
+                                                O`zi aloqaga chiqan
+                                                {%else%}
+                                                Tashqi tashkilot orqali
+                                                {%endif%}
+                                            </td>
+                                            <td>
+                                                {%if i.firma_name_sender %}
+                                                {{i.firma_name_sender}}
+                                                {%else%}
+                                                -
+                                                {%endif%}
+                                            </td>
+                                        </tr>
+                                        {%endfor%}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dark table end -->
+                </div>
+            </div>
+        </div>
+</div>
+
+ <script src="{% static 'assets/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <!-- bootstrap 4 js -->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/metisMenu.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Start datatable js -->
+    <script src="{% static 'assets/Sdn/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'assets/Sdn/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'assets/Sdn/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'assets/Sdn/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'assets/Sdn/responsive.bootstrap.min.js' %}"></script>
+    <!-- others plugins -->
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
+</body>
+</html>

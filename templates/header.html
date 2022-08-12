@@ -1,0 +1,42 @@
+{% load static %}
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="header__logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'files/ed.svg'%}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="header__nav__option">
+                    <nav class="header__nav__menu mobile-menu">
+                        <ul>
+                            <li class="header-1 active"><a href="{% url 'index' %}">Главная</a></li>
+                            <li class="header-2"><a href="{% url 'about' %}">О нас</a></li>
+                            <li class="header-3"><a href="{% url 'service' %}">Сервисы</a></li>
+                            <li class="header-4"><a href="{% url 'portfolio' %}">Портфолио</a></li>
+                            <li class="header-5"><a href="{% url 'contacts' %}">Контакты</a></li>
+                            {% if  user.is_authenticated %}
+					        <li class="header-5"><a href="{% url 'profile' %}">Profile</a></li>
+					        {% endif %}
+					        {% if  user.is_anonymous %}
+					        <li><a href="{% url 'register' %}">Register</a></li>
+					        <li><a href="{% url 'login' %}">Login</a></li> 
+					        {% endif %}   
+                            <li><a href="#">UZ</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__nav__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-telegram"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+</header>
+<!-- Header End -->

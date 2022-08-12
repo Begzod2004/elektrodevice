@@ -1,0 +1,147 @@
+{% extends "../base.html" %}
+
+{% block title %}
+Сервисы
+{% endblock %}
+
+{% block custom_css %}
+
+{% endblock %}
+
+
+{% block content %}
+    {% load static %}
+
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad set-bg" data-setbg="{% static 'files/breadcrumb-bg.jpg'%}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                <h2>Наши сервисы</h2>
+                {% for item in service %}
+                <li class="myli" style="width: 200px;">
+                <div clawss="best_shoes">
+                  <div class="star_text">
+                    <div class="left_part" >
+                        <p> Name:  {{item.name}}</p>
+                        <p> Info:  {{item.info}}</p>
+                        <p> Type:  {{item.type}}</p>
+                    </div>
+                    <div class="right_part">
+                    </div>
+                  </div>
+                  <div class="snipcart-details top_brand_home_details">
+                </div>
+                </div>
+                </li>
+              {% endfor %}
+              
+
+
+                    <div class="breadcrumb__links">
+                        <a href="{% url 'index' %}">Главная</a>
+                        <span>Сервисы</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+
+<!-- Services Section Begin -->
+<section class="services-page spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                    <div class="services__item__icon">
+                        <img src="{% static 'files/icons/kindpng_730525.png'%}" alt="">
+                    </div>
+                    <h4>Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dolores placeat? Doloribus eveniet, exercitationem molestias nobis perferendis placeat ratione!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                    <div class="services__item__icon">
+                        <img src="{% static 'files/icons/money-bag-48.png'%}" alt="">
+                    </div>
+                    <h4>Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dolores placeat? Doloribus eveniet, exercitationem molestias nobis perferendis placeat ratione!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                    <div class="services__item__icon">
+                        <img src="{% static 'files/icons/services-48.png'%}" alt="">
+                    </div>
+                    <h4>Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dolores placeat? Doloribus eveniet, exercitationem molestias nobis perferendis placeat ratione!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                    <div class="services__item__icon">
+                        <img src="{% static 'files/icons/transparent-electric-icon-electricity-icon-power-icon-5db257d6a4d588.2833207015719689826752.png'%}" alt="">
+                    </div>
+                    <h4>Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dolores placeat? Doloribus eveniet, exercitationem molestias nobis perferendis placeat ratione!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                    <div class="services__item__icon">
+                        <img src="{% static 'files/icons/transparent-electric-icon-electricity-icon-power-icon-5db257d6a4d588.2833207015719689826752.png'%}" alt="">
+                    </div>
+                    <h4>Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dolores placeat? Doloribus eveniet, exercitationem molestias nobis perferendis placeat ratione!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="services__item">
+                    <div class="services__item__icon">
+                        <img src="{% static 'files/icons/services-48.png'%}" alt="">
+                    </div>
+                    <h4>Lorem ipsum dolor.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dolores placeat? Doloribus eveniet, exercitationem molestias nobis perferendis placeat ratione!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Logo Begin -->
+<div class="logo spad">
+    <div class="container">
+        <div class="logo__carousel owl-carousel">
+            <a href="#" class="logo__item"><img src="{% static 'files/logo/logo-1.png'%}" alt=""></a>
+            <a href="#" class="logo__item"><img src="{% static 'files/logo/logo-2.png'%}" alt=""></a>
+            <a href="#" class="logo__item"><img src="{% static 'files/logo/logo-3.png'%}" alt=""></a>
+            <a href="#" class="logo__item"><img src="{% static 'files/logo/logo-4.png'%}" alt=""></a>
+            <a href="#" class="logo__item"><img src="{% static 'files/logo/logo-5.png'%}" alt=""></a>
+            <a href="#" class="logo__item"><img src="{% static 'files/logo/logo-6.png'%}" alt=""></a>
+        </div>
+    </div>
+</div>
+<!-- Logo End -->
+
+
+
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script>
+    document.querySelector('.header-2').classList.remove('active')
+    document.querySelector('.header-1').classList.remove('active')
+    document.querySelector('.header-3').classList.add('active')
+    document.querySelector('.header-4').classList.remove('active')
+    document.querySelector('.header-5').classList.remove('active')
+</script>
+
+{% endblock %}
